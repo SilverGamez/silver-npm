@@ -5,10 +5,10 @@
     "discord-api-types": "^0.23.1",
     "discord.js": "^13.1.0",
     "fs": "^0.0.1-security",
-    "silver-npm": "^1.0.0"
+    "silver-npm": "^1.0.5"
   },
   "name": "silver-npm",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Silver-npm",
   "main": "index.js",
   "directories": {
@@ -19,7 +19,6 @@
   },
   "author": "Silver_3",
   "license": "ISC",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/SilverGamez/silver-npm.git"
