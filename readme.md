@@ -92,5 +92,5 @@ module.exports = {
 ```
 
 ### What is should look like:
-![look](https://cdn.discordapp.com/attachments/884277461926428722/889027137900789810/unknown.png) 
-![look](https://cdn.discordapp.com/attachments/884277461926428722/889027451429203968/unknown.png)
+![https://cdn.discordapp.com/attachments/884277461926428722/889028424205754398/unknown.png](https://cdn.discordapp.com/attachments/884277461926428722/889028424205754398/unknown.png) 
+![https://cdn.discordapp.com/attachments/884277461926428722/889028457126854746/unknown.png](https://cdn.discordapp.com/attachments/884277461926428722/889028457126854746/unknown.png)

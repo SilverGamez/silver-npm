@@ -5,10 +5,10 @@
     "discord-api-types": "^0.23.1",
     "discord.js": "^13.1.0",
     "fs": "^0.0.1-security",
-    "silver-npm": "^1.0.5"
+    "silver-npm": "^1.0.6"
   },
   "name": "silver-npm",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Silver-npm",
   "main": "index.js",
   "directories": {
