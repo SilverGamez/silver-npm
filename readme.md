@@ -17,7 +17,7 @@ const Silver = require('silver-npm');
 # .registerSlashCommands()
 #### In this function, it will register the slash commands to the provided guilds with provided commands
 #### A example of usage is below
-### Main.js
+### index.js
 ```javascript
 //this is used to register slash commands
 const Silver = require('silver-npm'); //require the package
