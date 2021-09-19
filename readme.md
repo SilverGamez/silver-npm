@@ -76,3 +76,21 @@ module.exports = async (guildID) => {
     Silver.registerSlashCommands(config); //registers the commands
 }
 ```
+
+### commands/ping.js
+```javascript
+const { SlashCommandBuilder } = require('@discordjs/builders'); //require the slash command builder
+
+module.exports = {
+    run: async (interaction, client) => {
+        interaction.reply("Pong!"); //replies with "Pong!"
+    },
+    data: new SlashCommandBuilder()
+    .setName("ping") //name of the command
+    .setDescription("Pong!") //description of the command
+}
+```
+
+### What is should look like:
+![look](https://cdn.discordapp.com/attachments/884277461926428722/889027137900789810/unknown.png) 
+![look](https://cdn.discordapp.com/attachments/884277461926428722/889027451429203968/unknown.png)
