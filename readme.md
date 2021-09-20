@@ -18,6 +18,7 @@ npm install silver-npm
 const Silver = require('silver-npm'); 
 ```
 
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 # .registerSlashCommands()
 #### In this function, it will register the slash commands to the provided guilds with provided commands
 #### A example of usage is below
@@ -32,7 +33,7 @@ client.commands = new Discord.Collection(); //create a collection to store the c
 
 const files = fs.readdirSync('./commands').filter(file => file.endsWith(".js")); //only use files that ends with .js
 for (const file of files) {
-    const command = require(`./commands/${command}`); //file to commands folder 
+    const command = require(`./commands/${file}`); //file to commands folder 
     client.commands.set(command.data.name, command); //add the command to the collection
 }
 
@@ -129,80 +130,3 @@ client.login('TOKEN'); //login into the bot
 ![https://cdn.discordapp.com/attachments/884277461926428722/889101716602101790/unknown.png](https://cdn.discordapp.com/attachments/884277461926428722/889101716602101790/unknown.png)
 
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-
-
-# .play()
-#### In this, the bot will play music!
-
-### index.js
-```javascript
-const Silver = require('silver-npm'); //import the package
-const Discord = require('discord.js'); //require discord
-const client = new Discord.Client({
-    intents: ["GUILDS", "GUILD_MESSAGES"]
-});
-
-client.on('ready', () => {
-    console.log('Bot is online'); //when bot is online
-})
-
-client.on('messageCreate', (message) => {
-    if (!message.guild) return; //if it is a dm, it wont run
-    const args = message.content.substring('!'.length).split(' ');
-
-    if (message.content.startsWith("!play")) {
-        const song = args.join(' ');
-        /*
-            !play <song>
-            !play among us
-        */
-
-        if (!song) return message.channel.send('Please add a song to play'); //if no song provided
-
-        Silver.play(message, song, client, {
-            noVoiceChannel: '', //if user isnt in a voice channel, it will send a message
-            cantJoinVoice: '', //if bot cant join the vc
-            cantFindSong: '', //if the bot cant find the song
-            volume: 100 //volume when bot joins
-        });
-    }
-})
-
-client.login('TOKEN'); //login into the bot
-```
-
-### Output:
-
-![https://cdn.discordapp.com/attachments/864025300459585549/889318880399470622/unknown.png](https://cdn.discordapp.com/attachments/864025300459585549/889318880399470622/unknown.png)
-
-▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
-
-# .queue()
-#### In this, the bot will display the queue
-
-### index.js
-```javascript
-const Silver = require('silver-npm'); //import the package
-const Discord = require('discord.js'); //require discord
-const client = new Discord.Client({
-    intents: ["GUILDS", "GUILD_MESSAGES", "GUILD_VOICE_STATES"]
-});
-
-client.on('ready', () => {
-    console.log('Bot is online'); //when bot is online
-})
-
-client.on('messageCreate', (message) => {
-    if (!message.guild) return; //if it is a dm, it wont run
-
-    if (message.content.startsWith("!queue")) {
-        Silver.queue(message, client); //gets the queue
-    } 
-})
-
-client.login('TOKEN'); //login into the bot
-```
-
-### Output: 
-
-![]()

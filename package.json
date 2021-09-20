@@ -9,10 +9,10 @@
     "fs": "^0.0.1-security",
     "node-fetch": "^2.6.2",
     "opusscript": "^0.0.8",
-    "silver-npm": "^2.0.0"
+    "silver-npm": "^2.0.2"
   },
   "name": "silver-npm",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Silver-npm",
   "main": "index.js",
   "directories": {
