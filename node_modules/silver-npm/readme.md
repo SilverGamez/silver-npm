@@ -1,6 +1,10 @@
 # silver-npm
 
 [silver-npm](https://www.npmjs.com/package/silver-npm) is a npm package made by (Silver_3#6333) because i was bored
+ 
+[【Github】](https://github.com/SilverGamez/silver-npm)
+[【Npm】](https://www.npmjs.com/package/silver-npm)
+[【Node.js】](https://nodejs.org/en/download/)
 
 ## Installation
 
@@ -98,6 +102,7 @@ module.exports = {
 ### Output: 
 ![https://cdn.discordapp.com/attachments/884277461926428722/889102753761202226/unknown.png](https://cdn.discordapp.com/attachments/884277461926428722/889102753761202226/unknown.png)
 
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
 
 # .chatBot()
 #### In this function, the bot will be a chatbot pretty much
@@ -122,3 +127,52 @@ client.login('TOKEN'); //login into the bot
 ### Output:
 
 ![https://cdn.discordapp.com/attachments/884277461926428722/889101716602101790/unknown.png](https://cdn.discordapp.com/attachments/884277461926428722/889101716602101790/unknown.png)
+
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+
+# .play()
+#### In this, the bot will play music!
+
+### index.js
+```javascript
+const Silver = require('silver-npm'); //import the package
+const Discord = require('discord.js'); //require discord
+const client = new Discord.Client({
+    intents: ["GUILDS", "GUILD_MESSAGES"]
+});
+
+client.on('ready', () => {
+    console.log('Bot is online'); //when bot is online
+})
+
+client.on('messageCreate', (message) => {
+    if (!message.guild) return; //if it is a dm, it wont run
+    const args = message.content.substring('!'.length).split(' ');
+
+    if (message.content.startsWith("!play")) {
+        const song = args.join(' ');
+        /*
+            !play <song>
+            !play among us
+        */
+
+        if (!song) return message.channel.send('Please add a song to play'); //if no song provided
+
+        Silver.play(message, song, client, {
+            noVoiceChannel: '', //if user isnt in a voice channel, it will send a message
+            cantJoinVoice: '', //if bot cant join the vc
+            cantFindSong: '', //if the bot cant find the song
+            volume: 100 //volume when bot joins
+        });
+    }
+})
+
+client.login('TOKEN'); //login into the bot
+```
+
+### Output:
+
+![https://cdn.discordapp.com/attachments/864025300459585549/889318880399470622/unknown.png](https://cdn.discordapp.com/attachments/864025300459585549/889318880399470622/unknown.png)
+
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔

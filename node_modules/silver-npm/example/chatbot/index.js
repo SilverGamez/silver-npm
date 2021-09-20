@@ -1,4 +1,4 @@
-const Silver = require('../../index');
+const Silver = require('silver-npm');
 const Discord = require('discord.js');
 const client = new Discord.Client({intents: ["GUILDS", "GUILD_INTEGRATIONS", "GUILD_MESSAGES"]});
 
