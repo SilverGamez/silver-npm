@@ -4,10 +4,10 @@ const {
 } = require('discord.js');
 
 async function buttonHelp(channel, embeds, emojiNext, emojiBack) {
-    if (!channel) return new Error('Silver-Npm buttonHelp --> No channel provided. View the example: ');
-    if (!Array.isArray(embeds) || !embeds) return new Error('Silver-npm buttonHelp --> No embeds provided / embeds isnt an array. View the example: ');
-    if (!emojiNext) return new Error('Silver-Npm buttonHelp --> No next emoji provided. View the example: ');
-    if (!emojiBack) return new Error('Silver-Npm buttonHelp --> No back emoji provided. View the example: ');
+    if (!channel) return new Error('Silver-Npm buttonHelp --> No channel provided. View the example: https://github.com/SilverGamez/silver-npm#buttonhelp');
+    if (!Array.isArray(embeds) || !embeds) return new Error('Silver-npm buttonHelp --> No embeds provided / embeds isnt an array. View the example: https://github.com/SilverGamez/silver-npm#buttonhelp');
+    if (!emojiNext) return new Error('Silver-Npm buttonHelp --> No next emoji provided. View the example: https://github.com/SilverGamez/silver-npm#buttonhelp');
+    if (!emojiBack) return new Error('Silver-Npm buttonHelp --> No back emoji provided. View the example: https://github.com/SilverGamez/silver-npm#buttonhelp');
 
     let pageNumber = 0;
 
