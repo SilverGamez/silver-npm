@@ -1,8 +1,8 @@
 const fetch = require('node-fetch').default;
 
 async function chatbot(message, channelID) {
-    if (!message) return new Error('Silver-npm chatbot --> No message provided. View the example');
-    if (!channelID || isNaN(channelID)) return new Error('Silver-npm chatbot --> Invalid channel id provided. View the example');
+    if (!message) return new Error('Silver-npm chatbot --> No message provided. View the example: https://github.com/SilverGamez/silver-npm#chatbot');
+    if (!channelID || isNaN(channelID)) return new Error('Silver-npm chatbot --> Invalid channel id provided. View the example: https://github.com/SilverGamez/silver-npm#chatbot');
 
     if (message.channel.id == channelID) {
         if (message.author.bot) return;
