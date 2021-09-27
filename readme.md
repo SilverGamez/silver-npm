@@ -175,3 +175,33 @@ client.login('TOKEN');
 [Video](https://cdn.discordapp.com/attachments/884277461926428722/891917757216620554/Desktop_2021.09.27_-_15.20.53.01.mp4)
 
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+# .transcript()
+#### In this function, the bot will make a transcript of the channel
+
+### index.js
+```javascript
+const Silver = require('silver-npm'); //require the package
+const Discord = require('discord.js'); //also require discord.js
+const client = new Discord.Client({
+    intents: ["GUILDS", "GUILD_MESSAGES"]
+});
+
+client.on('ready', () => {
+    console.log('Bot is online'); //when bot is online
+});
+
+client.on('messageCreate', (message) => {
+    if (message.content == "!transcript") {
+        Silver.transcript(message.channel); //create the transcript
+    }
+});
+
+client.login('TOKEN');
+```
+
+### Output:
+
+![https://cdn.discordapp.com/attachments/892010603068141598/892011276551720990/unknown.png](https://cdn.discordapp.com/attachments/892010603068141598/892011276551720990/unknown.png)
+
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
