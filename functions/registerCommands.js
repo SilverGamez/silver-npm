@@ -18,12 +18,12 @@ async function registerCommands(config) {
     const token = config.token; //bot token
     const commands = config.commands; //array of commands
 
-    if (!guildID || isNaN(guildID)) return new Error('Silver-Npm registerSlashCommands --> Invalid guild id used. View the example');
-    if (!clientID || isNaN(clientID)) return new Error('Silver-Npm registerSlashCommands --> Invalid client id used. View the example');
-    if (!token) return new Error('Silver-Npm registerSlashCommands --> No bot token provied. View the example');
+    if (!guildID || isNaN(guildID)) return new Error('Silver-Npm registerSlashCommands --> Invalid guild id used. View the example: https://github.com/SilverGamez/silver-npm#load-commandsjs');
+    if (!clientID || isNaN(clientID)) return new Error('Silver-Npm registerSlashCommands --> Invalid client id used. View the example: https://github.com/SilverGamez/silver-npm#load-commandsjs');
+    if (!token) return new Error('Silver-Npm registerSlashCommands --> No bot token provied. View the example: https://github.com/SilverGamez/silver-npm#load-commandsjs');
 
-    if (!commands) return new Error('Silver-Npm registerSlashCommands --> No commands provided. View the example');
-    if (!Array.isArray(commands)) return new Error('Silver-Npm registerSlashCommands --> Commands is not an array. View the example');
+    if (!commands) return new Error('Silver-Npm registerSlashCommands --> No commands provided. View the example: https://github.com/SilverGamez/silver-npm#load-commandsjs');
+    if (!Array.isArray(commands)) return new Error('Silver-Npm registerSlashCommands --> Commands is not an array. View the example: https://github.com/SilverGamez/silver-npm#load-commandsjs');
 
     const rest = new REST({
         version: '9'

@@ -110,7 +110,7 @@ module.exports = {
 
 ### index.js
 ```javascript
-const Silver = require('silver-npm'); //requre the package
+const Silver = require('silver-npm'); //require the package
 const Discord = require('discord.js'); //also need discord
 const client = new Discord.Client({intents: ["GUILDS", "GUILD_MESSAGES"]});
 
@@ -128,5 +128,50 @@ client.login('TOKEN'); //login into the bot
 ### Output:
 
 ![https://cdn.discordapp.com/attachments/884277461926428722/889101716602101790/unknown.png](https://cdn.discordapp.com/attachments/884277461926428722/889101716602101790/unknown.png)
+
+▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+# .buttonHelp()
+#### In this function, the bot will make a help menu with buttons
+
+### index.js
+```javascript
+const Silver = require('silver-npm'); //require the package
+const Discord = require('discord.js'); //also need discord for embeds
+const client = new Discord.Client({
+    intents: ["GUILDS", "GUILD_MESSAGES"]
+});
+
+client.on('ready', () => {
+    console.log('Bot is online'); //when bot is online
+});
+
+client.on('messageCreate', (message) => {
+    if (message.content == "!help") {
+        const embed1 = new Discord.MessageEmbed()
+            .setTitle('Page 1')
+            .setColor('RANDOM')
+
+        const embed2 = new Discord.MessageEmbed()
+            .setTitle('Page 2')
+            .setColor('RANDOM')
+
+        const embed3 = new Discord.MessageEmbed()
+            .setTitle('Page 3')
+            .setColor('RANDOM')
+
+        Silver.buttonHelp(message.channel, [embed1, embed2, embed3], '▶', '◀');
+        // Slver.buttonHelp(channel, array-of-embeds, next, back)
+
+
+    }
+});
+
+client.login('TOKEN');
+```
+
+### Output: 
+
+[Video](https://cdn.discordapp.com/attachments/884277461926428722/891917757216620554/Desktop_2021.09.27_-_15.20.53.01.mp4)
 
 ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
