@@ -28,6 +28,7 @@ const Silver = require('silver-npm');
 const Silver = require('silver-npm'); //require the package
 const fs = require('fs'); //we will need fs (npm i fs)
 const Discord = require('discord.js'); //discord.js v13 need to be installed (npm i discord.js)
+const client = new Discord.Client({intents: ["GUILDS", "GUILD_INTEGRATIONS"]});
 
 client.commands = new Discord.Collection(); //create a collection to store the commands
 
